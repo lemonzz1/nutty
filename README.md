@@ -37,7 +37,5 @@
 # TAC.integration();
 #  1.TAC.integration("任意数组");可以吧你出入的任意输入转换集合到一个字符串上并返回
 # SDT.STring_int();
-#  1.SDT.String_int();会把你输入的字符串强转为int类型并返回,比如:a1b1c2,转换后:123
 
-
-      
+# 1.SDT.String_int();会把你输入的字符串强转为int类型并返回,比如:a1b1c2,转换后:123(此功能还在开发中)
