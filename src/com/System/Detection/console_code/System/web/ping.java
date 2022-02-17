@@ -23,7 +23,7 @@ public class ping extends Detection {
 	}
 
 	private static void ping_code() {
-		if (fi == 0||fi >=100) {
+		if (fi == 0 || fi >= 100) {
 			fi = 10;
 		}
 		String code = "ping -c" + fi + " " + fip;

@@ -1,12 +1,7 @@
 package com.help;
 
-import com.SQL.MySQL.Data.MySQL;
-import com.System.Detection.Detection;
-import com.System.print.console;
 import com.System.print.cont;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Main {
