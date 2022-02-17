@@ -4,6 +4,7 @@
     <root id="root">
       <element id="archive" name="nutty.jar">
         <element id="module-output" name="nutty" />
+        <element id="library" level="project" name="JDBC_8.0.26" />
       </element>
     </root>
   </artifact>
