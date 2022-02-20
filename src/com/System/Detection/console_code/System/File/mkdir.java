@@ -11,7 +11,7 @@ public class mkdir {
 	}
 
 	public static void mkdir(String File_name) {
-		String File_CD = FileCD.get_CD();
+		String File_CD = FileCD.getCD();
 		File_CD = File_CD.replaceAll(" ", "\\\\ ");
 		String code = "mkdir \"" + File_CD + "/" + File_name + "\"";
 		terminal.set_terminal(code);

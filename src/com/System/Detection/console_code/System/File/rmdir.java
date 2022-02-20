@@ -11,7 +11,7 @@ public class rmdir {
 	}
 
 	public static void rmdir(String File_name) {
-		String File_CD = FileCD.get_CD();
+		String File_CD = FileCD.getCD();
 		File_CD = File_CD.replaceAll(" ", "\\\\");
 		String Text = File_CD + File_name;
 		terminal.set_terminal(Text);

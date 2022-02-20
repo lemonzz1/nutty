@@ -75,7 +75,7 @@ public class TextPro {
 			//如果不在
 			//打印方法所在位置并输出参数内的路径
 			//System.err.println("["+this.getClass().getName()+":"+Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName()+"]:未能找到["+ file +"]文件");
-			Project.logs_Pro(2, "[" + this.getClass().getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
+			Project.logs_Pro(2, "[" + this.getClass().getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName() + "@" + Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
 		}
 
 	}
@@ -103,7 +103,7 @@ public class TextPro {
 				//如果不在
 				//打印方法所在位置并输出参数内的路径
 				//System.err.println("["+this.getClass().getName()+":"+Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName()+"]:未能找到["+file+"]文件");
-				Project.logs_Pro(2, "[" + this.getClass().getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
+				Project.logs_Pro(2, "[" + this.getClass().getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName() + "@" + Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
 			}
 			//捕获BUG原因
 		} catch (Exception Error) {
@@ -196,7 +196,7 @@ public class TextPro {
 			//如果不在
 			//打印方法所在位置并输出参数内的路径
 			//System.err.println("["+ get_TextPro.class.getName()+":"+Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName()+"]:未能找到["+ file +"]文件");
-			Project.logs_Pro(2, "[" + TextPro.class.getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
+			Project.logs_Pro(2, "[" + TextPro.class.getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName() + "@" + Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
 		}
 	}
 
@@ -223,7 +223,7 @@ public class TextPro {
 				//如果不在
 				//打印方法所在位置并输出参数内的路径
 				//System.err.println("[" + get_TextPro.class.getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
-				Project.logs_Pro(2, "[" + TextPro.class.getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
+				Project.logs_Pro(2, "[" + TextPro.class.getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName() + "@" + Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
 			}
 			//捕获BUG原因
 		} catch (Exception Error) {

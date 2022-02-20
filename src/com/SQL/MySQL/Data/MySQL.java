@@ -15,7 +15,7 @@ public class MySQL extends SQL {
 			Project.logs_Pro(2, List.getHashMap(2));
 		} catch (ClassNotFoundException ignored) {
 			//System.out.println("JDBC加载错误(JDBC loading error)");
-			Project.logs_Pro(4, List.getHashMap(1)+":"+ignored);
+			Project.logs_Pro(4, List.getHashMap(1) + ":" + ignored);
 		}
 	}
 
@@ -25,7 +25,7 @@ public class MySQL extends SQL {
 			Project.logs_Pro(2, List.getHashMap(2));
 		} catch (ClassNotFoundException ignored) {
 			//System.out.println("JDBC加载错误(JDBC loading error)");
-			Project.logs_Pro(4, List.getHashMap(1)+":"+ignored);
+			Project.logs_Pro(4, List.getHashMap(1) + ":" + ignored);
 		}
 
 	}
@@ -36,7 +36,7 @@ public class MySQL extends SQL {
 			Project.logs_Pro(2, List.getHashMap(2));
 		} catch (ClassNotFoundException ignored) {
 			//System.out.println("JDBC加载错误(JDBC loading error)");
-			Project.logs_Pro(4, List.getHashMap(1)+":"+ignored);
+			Project.logs_Pro(4, List.getHashMap(1) + ":" + ignored);
 		}
 
 	}
@@ -45,7 +45,7 @@ public class MySQL extends SQL {
 		setUrl(url);
 		setName(name);
 		setPassword(password);
-		Project.logs(Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName() + "()" + ":写入Url[" + url + "]写入Name[" + name + "]写入password[]");
+		Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "@" + Thread.currentThread().getStackTrace()[1].getMethodName() + "()" + ":写入Url[" + url + "]写入Name[" + name + "]写入password[]");
 	}
 
 	/*public Connection start_connection_start_con(String url,String name,String password)throws ClassNotFoundException,SQLException {
@@ -66,9 +66,9 @@ public class MySQL extends SQL {
 
 	public static class set {
 
-		protected static int MySQL_SQL_STATE(Connection connection, String SQL, Object... objects){
+		protected static int MySQL_SQL_STATE(Connection connection, String SQL, Object... objects) {
 			int set_MySQL_SQL_STATE_int_i = 0;
-			try{
+			try {
 				Class.forName(getDriver());
 				PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 				if (objects != null) {
@@ -78,8 +78,8 @@ public class MySQL extends SQL {
 					set_MySQL_SQL_STATE_int_i = preparedStatement.executeUpdate();
 				}
 				preparedStatement.close();
-			}catch (SQLException | ClassNotFoundException e) {
-				com.project.log.Project.logs_Pro(2,"遇到致命错误:"+e);
+			} catch (SQLException | ClassNotFoundException e) {
+				com.project.log.Project.logs_Pro(2, "遇到致命错误:" + e);
 				e.printStackTrace();
 			}
 
@@ -94,13 +94,13 @@ public class MySQL extends SQL {
 				preparedStatement.executeUpdate();
 				preparedStatement.close();
 			} catch (SQLException | ClassNotFoundException e) {
-				com.project.log.Project.logs_Pro(2,"遇到致命错误:"+e);
+				com.project.log.Project.logs_Pro(2, "遇到致命错误:" + e);
 				e.printStackTrace();
 			}
 			return set_MySQL_SQL_STATE_int_i;
 		}
 
-		public static String MySQL_String(Connection connection, String SQL, Object... objects){
+		public static String MySQL_String(Connection connection, String SQL, Object... objects) {
 			int i = MySQL_SQL_STATE(connection, SQL, objects);
 			if (i > 0) {
 				com.project.log.Project.logs_Pro_file(List.getHashMap(5) + "\t[" + i + "]" + List.getHashMap(7));
@@ -127,13 +127,13 @@ public class MySQL extends SQL {
 			return MySQL_SQL_STATE(connection, SQL, objects);
 		}
 
-		public static int MySQL_int(Connection connection, String SQL)  {
+		public static int MySQL_int(Connection connection, String SQL) {
 			com.project.log.Project.logs_Pro_file("运行成功");
 			return MySQL_SQL_STATE(connection, SQL);
 		}
 
 
-		public static void Class_Print_logs(Connection connection, String SQL, Object... objects)  {
+		public static void Class_Print_logs(Connection connection, String SQL, Object... objects) {
 			int i = MySQL_SQL_STATE(connection, SQL, objects);
 			if (i > 0) {
 				//System.out.println("执行成功\t[" + i + "]行受影响");
@@ -145,7 +145,7 @@ public class MySQL extends SQL {
 		}
 
 
-		public static void Class_Print_logs(Connection connection, String SQL)  {
+		public static void Class_Print_logs(Connection connection, String SQL) {
 			int i = MySQL_SQL_STATE(connection, SQL);
 			if (i > 0) {
 				//System.out.println("执行成功\t[" + i + "]行受影响");
@@ -166,7 +166,7 @@ public class MySQL extends SQL {
 				Project.logs_Pro(2, List.getHashMap(2));
 			} catch (ClassNotFoundException ignored) {
 				//System.out.println("JDBC加载错误(JDBC loading error)");
-				Project.logs_Pro(4, List.getHashMap(1)+":"+ignored);
+				Project.logs_Pro(4, List.getHashMap(1) + ":" + ignored);
 			}
 		}
 
@@ -213,7 +213,7 @@ public class MySQL extends SQL {
 
 
 		public static void Class_Print_logs(Connection connection, String SQL) {
-			try{
+			try {
 				Class.forName(getDriver());
 				PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 				ResultSetMetaData resultSetMetaData = preparedStatement.getMetaData();
@@ -232,15 +232,15 @@ public class MySQL extends SQL {
 				resultSet.close();
 				connection.close();
 				com.project.log.Project.logs_Pro_file("运行成功");
-			}catch (SQLException | ClassNotFoundException e) {
-				com.project.log.Project.logs_Pro(4,"遇到致命错误:"+e);
+			} catch (SQLException | ClassNotFoundException e) {
+				com.project.log.Project.logs_Pro(4, "遇到致命错误:" + e);
 				e.printStackTrace();
 			}
 
 		}
 
-		public static void Class_Print_logs(Connection connection, String SQL, Object... objects){
-			try{
+		public static void Class_Print_logs(Connection connection, String SQL, Object... objects) {
+			try {
 				Class.forName(getDriver());
 				PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 				for (int i = 0; i < objects.length; i++) {
@@ -263,26 +263,26 @@ public class MySQL extends SQL {
 				connection.close();
 				com.project.log.Project.logs_Pro_file("运行成功");
 			} catch (SQLException | ClassNotFoundException e) {
-				com.project.log.Project.logs_Pro(4,"遇到致命错误:"+e);
+				com.project.log.Project.logs_Pro(4, "遇到致命错误:" + e);
 				e.printStackTrace();
 			}
 
 		}
 
-		public static ResultSet MySQL_ResultSet(Connection connection, String SQL){
-			try{
+		public static ResultSet MySQL_ResultSet(Connection connection, String SQL) {
+			try {
 				Class.forName(getDriver());
 				PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 				com.project.log.Project.logs_Pro_file("运行成功");
 				return preparedStatement.executeQuery();
 			} catch (SQLException | ClassNotFoundException e) {
-				com.project.log.Project.logs_Pro(4,"遇到致命错误:"+e);
+				com.project.log.Project.logs_Pro(4, "遇到致命错误:" + e);
 				e.printStackTrace();
 			}
 			return null;
 		}
 
-		public static ResultSet MySQL_ResultSet(Connection connection, String SQL, Object... objects){
+		public static ResultSet MySQL_ResultSet(Connection connection, String SQL, Object... objects) {
 			PreparedStatement preparedStatement = null;
 			try {
 				Class.forName(getDriver());
@@ -293,14 +293,14 @@ public class MySQL extends SQL {
 				com.project.log.Project.logs_Pro_file("运行成功");
 				return preparedStatement.executeQuery();
 			} catch (SQLException | ClassNotFoundException e) {
-				com.project.log.Project.logs_Pro(2, "遇到致命错误"+e);
+				com.project.log.Project.logs_Pro(2, "遇到致命错误" + e);
 				e.printStackTrace();
 			}
 			return null;
 		}
 
 		public static void Class_Print_logs(Connection connection, ResultSet resultSet) {
-			try{
+			try {
 				Class.forName(getDriver());
 				ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
 				int get_MySQL_i_int = resultSetMetaData.getColumnCount();
@@ -317,14 +317,14 @@ public class MySQL extends SQL {
 				resultSet.close();
 				com.project.log.Project.logs_Pro_file("运行成功");
 			} catch (SQLException | ClassNotFoundException e) {
-				com.project.log.Project.logs_Pro(2,"遇到致命错误"+e);
+				com.project.log.Project.logs_Pro(2, "遇到致命错误" + e);
 				e.printStackTrace();
 			}
 
 		}
 
 		public static void Class_Print_logs(ResultSet resultSet) {
-			try{
+			try {
 				Class.forName(getDriver());
 				ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
 				int get_MySQL_i_int = resultSetMetaData.getColumnCount();
@@ -339,8 +339,8 @@ public class MySQL extends SQL {
 				GET_CLASS_PEINR_SY(resultSet, get_MySQL_i_int);
 				resultSet.close();
 				Project.logs_Pro_file("运行成功");
-			}catch (ClassNotFoundException | SQLException e) {
-				Project.logs_Pro(2,"遇到致命错误"+e);
+			} catch (ClassNotFoundException | SQLException e) {
+				Project.logs_Pro(2, "遇到致命错误" + e);
 				e.printStackTrace();
 			}
 

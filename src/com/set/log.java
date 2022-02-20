@@ -1,7 +1,7 @@
 package com.set;
 
 public class log {
-	public static String jarName = "nutty";
+	public static String jarName = "nutty.jar";
 	public static String jarVersion = "1.5";
 	public static String jarMainFile = "src/com/help/Main";
 	public static String jarAuthor = "Lemon";

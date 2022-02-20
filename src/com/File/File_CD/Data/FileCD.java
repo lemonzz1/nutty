@@ -5,12 +5,12 @@ import com.project.log.Project;
 import java.io.File;
 
 public class FileCD {
-	public static String get_CD() {
+	public static String getCD() {
 		Project.logs_Pro_file("获取项目绝对路径:[" + System.getProperty("user.dir") + "]");
 		return System.getProperty("user.dir");
 	}
 
-	public static File get_CD_File() {
+	public static File getCDFile() {
 		String FileCD = System.getProperty("user.dir");
 		Project.logs_Pro_file("获取项目绝对路径:[" + System.getProperty("user.dir") + "]");
 		return new File(FileCD);

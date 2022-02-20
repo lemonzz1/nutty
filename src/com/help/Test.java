@@ -1,32 +1,33 @@
 package com.help;
 
 import com.System.console.Scanner;
+import com.System.exec.form;
 import com.System.print.cont;
 import com.help.console.console;
 import com.project.log.Project;
 import com.set.log;
 
-import javax.swing.*;
-
 public class Test {
 	public static int main() {
-		Project.logs_Pro(2,"正在运行");
+		Project.logs_Pro(2, "正在运行");
 		while (true) {
 			cont.print(2, "有什么需要帮助的吗?\n1.帮助\t2.简介\t3.运行终端代码\t4.弹出弹出对话框\t5.退出");
-			int i = Scanner.input_title.Int("1~4>>>");
+			int i = Scanner.input_title.Int("1~5>>>");
 			if (i > 5 || i <= 0) {
-				cont.print(2, "只能输入1-4之内的整数");
+				cont.print(2, "只能输入1-5之内的整数");
 				i = 0;
 			} else if (i == 4) {
 				Object[] options = {"帮助", "简介", "运行终端代码", "退出"};
-				String s = (String) JOptionPane.showInputDialog(null, "选择你要的功能:\n", log.jarName, JOptionPane.PLAIN_MESSAGE, new ImageIcon("xx.png"), options, "xx");
-				i = switch (s) {
-					case "帮助" -> 1;
-					case "简介" -> 2;
-					case "运行终端代码" -> 3;
-					case "退出" -> 5;
-					default -> i;
-				};
+				String s = form.start.chooseForm("选择你要的功能:",log.jarName,"src/com/data/icon/icon_1.png","简介", options);
+				if (s.equals("帮助")){
+					i = 1;
+				}else if (s.equals("简介")){
+					i = 2;
+				}else if (s.equals("运行终端代码")){
+					i = 3;
+				}else if (s.equals("退出")){
+					i = 5;
+				}
 			}
 			switch (i) {
 				case 1 -> {
@@ -44,11 +45,8 @@ public class Test {
 					console.code();
 				}
 				case 5 -> {
-					Project.logs_Pro(2,"以停止运行");
+					Project.logs_Pro(2, "以停止运行");
 					return 0;
-				}
-				default -> {
-					Project.logs_Pro("变量i遇到不可用的值");
 				}
 			}
 		}

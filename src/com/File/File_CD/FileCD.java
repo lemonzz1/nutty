@@ -2,12 +2,12 @@ package com.File.File_CD;
 
 import java.io.File;
 
-public interface File_CD {
-	static String get_CD() {
+public interface FileCD {
+	static String getCD() {
 		return System.getProperty("user.dir");
 	}
 
-	static File get_CD_File() {
+	static File getCDFile() {
 		String File_CD = System.getProperty("user.dir");
 		return new File(File_CD);
 	}
