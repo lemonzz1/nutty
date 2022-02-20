@@ -3,21 +3,30 @@ package com.System.console;
 import com.System.print.cont;
 import com.project.log.Project;
 
+import java.util.Objects;
+
 public class Scanner implements Console_Scanner {
+	protected static java.util.Scanner input_Scanner_Class(){
+		try{
+			return new java.util.Scanner(System.in);
+		}catch (Exception e){
+			Project.logs_Pro("遇到致命错误:"+e);
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 	public static class input_title {
 
 		public static String PassWord(String title) {
 			String input_PassWord = null;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
 				cont.print(1, title);
-				input_PassWord = input.next();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[String:PassWord]输入:处于安全考虑，不能打印PassWord");
+				input_PassWord = Objects.requireNonNull(Scanner.input_Scanner_Class()).next();
+				Project.logs_Pro_file("[String:PassWord]输入:处于安全考虑，不能打印PassWord");
 				return input_PassWord;
 			} catch (Exception e) {
-				cont.print_logs(4, Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[String:PassWord]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[String:PassWord]遇到致命错误");
+				Project.logs_Pro("[String:PassWord]遇到致命错误:"+e);
 				e.printStackTrace();
 			}
 			return input_PassWord;
@@ -26,14 +35,12 @@ public class Scanner implements Console_Scanner {
 		public static String String(String title) {
 			String input_text = null;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
 				cont.print(1, title);
-				input_text = input.nextLine();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[String]输入:" + title + input_text);
+				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextLine();
+				Project.logs_Pro_file("[String]输入:" + title + input_text);
 				return input_text;
 			} catch (Exception e) {
-				cont.print_logs(4, Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[String]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[String]遇到致命错误");
+				Project.logs_Pro("[String]遇到致命错误:"+e);
 				e.printStackTrace();
 			}
 			return input_text;
@@ -42,14 +49,12 @@ public class Scanner implements Console_Scanner {
 		public static int Int(String title) {
 			int input_text = 0;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
 				cont.print(1, title);
-				input_text = input.nextInt();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[int]输入:" + title + input_text);
+				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextInt();
+				Project.logs_Pro_file("[int]输入:" + title + input_text);
 				return input_text;
 			} catch (Exception e) {
-				cont.print_logs(4, Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[int]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[int]遇到致命错误");
+				Project.logs_Pro("[int]遇到致命错误:"+e);
 				e.printStackTrace();
 			}
 			return input_text;
@@ -60,14 +65,12 @@ public class Scanner implements Console_Scanner {
 		public static boolean Boolean(String title) {
 			boolean input_text = false;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
 				cont.print(1, title);
-				input_text = input.nextBoolean();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[boolean]输入:" + title + input_text);
+				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextBoolean();
+				Project.logs_Pro_file("[boolean]输入:" + title + input_text);
 				return input_text;
 			} catch (Exception e) {
-				cont.print_logs(4, Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[boolean]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[boolean]遇到致命错误");
+				Project.logs_Pro("[boolean]遇到致命错误"+e);
 				e.printStackTrace();
 			}
 			return input_text;
@@ -77,14 +80,12 @@ public class Scanner implements Console_Scanner {
 		public static double Double(String title) {
 			double input_text = 0;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
 				cont.print(1, title);
-				input_text = input.nextDouble();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[double]输入:" + title + input_text);
+				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextDouble();
+				Project.logs_Pro_file("[double]输入:" + title + input_text);
 				return input_text;
 			} catch (Exception e) {
-				cont.print_logs(4, Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[double]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[double]遇到致命错误");
+				Project.logs_Pro("[double]遇到致命错误:"+e);
 				e.printStackTrace();
 			}
 			return input_text;
@@ -94,14 +95,12 @@ public class Scanner implements Console_Scanner {
 		public static byte Byte(String title) {
 			byte input_text = 0;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
 				cont.print(1, title);
-				input_text = input.nextByte();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[byte]输入:" + title + input_text);
+				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextByte();
+				Project.logs_Pro_file("[byte]输入:" + title + input_text);
 				return input_text;
 			} catch (Exception e) {
-				cont.print_logs(4, Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[byte]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[byte]遇到致命错误");
+				Project.logs_Pro("[byte]遇到致命错误:"+e);
 				e.printStackTrace();
 			}
 			return input_text;
@@ -111,14 +110,12 @@ public class Scanner implements Console_Scanner {
 		public static float Float(String title) {
 			float input_text = 0;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
 				cont.print(1, title);
-				input_text = input.nextFloat();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[float]输入:" + title + input_text);
+				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextFloat();
+				Project.logs_Pro_file("[float]输入:" + title + input_text);
 				return input_text;
 			} catch (Exception e) {
-				cont.print_logs(4, Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[float]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[float]遇到致命错误");
+				Project.logs_Pro("[float]遇到致命错误:"+e);
 				e.printStackTrace();
 			}
 			return input_text;
@@ -130,13 +127,11 @@ public class Scanner implements Console_Scanner {
 		public static String PassWord() {
 			String input_PassWord = null;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
-				input_PassWord = input.next();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[String:PassWord]输入:处于安全考虑，不能打印PassWord");
+				input_PassWord = Objects.requireNonNull(Scanner.input_Scanner_Class()).next();
+				Project.logs_Pro_file("[String:PassWord]输入:处于安全考虑，不能打印PassWord");
 				return input_PassWord;
 			} catch (Exception e) {
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[String:PassWord]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[String:PassWord]遇到致命错误");
+				Project.logs_Pro("[String:PassWord]遇到致命错误:"+e);
 				e.printStackTrace();
 			}
 			return input_PassWord;
@@ -145,13 +140,11 @@ public class Scanner implements Console_Scanner {
 		public static String String() {
 			String input_text = null;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
-				input_text = input.nextLine();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[String]输入:" + input_text);
+				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextLine();
+				Project.logs_Pro_file("[String]输入:" + input_text);
 				return input_text;
 			} catch (Exception e) {
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[String]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[String]遇到致命错误");
+				Project.logs_Pro("[String]遇到致命错误:"+e);
 				e.printStackTrace();
 			}
 			return input_text;
@@ -160,13 +153,11 @@ public class Scanner implements Console_Scanner {
 		public static int Int() {
 			int input_text = 0;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
-				input_text = input.nextInt();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[int]输入:" + input_text);
+				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextInt();
+				Project.logs_Pro_file("[int]输入:" + input_text);
 				return input_text;
 			} catch (Exception e) {
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[int]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[int]遇到致命错误");
+				Project.logs_Pro("[int]遇到致命错误:"+e);
 				e.printStackTrace();
 			}
 			return input_text;
@@ -176,13 +167,11 @@ public class Scanner implements Console_Scanner {
 		public static boolean Boolean() {
 			boolean input_text = false;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
-				input_text = input.nextBoolean();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[boolean]输入:" + input_text);
+				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextBoolean();
+				Project.logs_Pro_file("[boolean]输入:" + input_text);
 				return input_text;
 			} catch (Exception e) {
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[boolean]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[boolean]遇到致命错误");
+				Project.logs_Pro("[boolean]遇到致命错误:"+e);
 				e.printStackTrace();
 			}
 			return input_text;
@@ -191,13 +180,11 @@ public class Scanner implements Console_Scanner {
 		public static double Double() {
 			double input_text = 0;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
-				input_text = input.nextDouble();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[double]输入:" + input_text);
+				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextDouble();
+				Project.logs_Pro_file("[double]输入:" + input_text);
 				return input_text;
 			} catch (Exception e) {
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[double]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[double]遇到致命错误");
+				Project.logs_Pro("[double]遇到致命错误:"+e);
 				e.printStackTrace();
 			}
 			return input_text;
@@ -206,13 +193,11 @@ public class Scanner implements Console_Scanner {
 		public static byte Byte() {
 			byte input_text = 0;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
-				input_text = input.nextByte();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[byte]输入:" + input_text);
+				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextByte();
+				Project.logs_Pro_file("[byte]输入:" + input_text);
 				return input_text;
 			} catch (Exception e) {
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[byte]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[byte]遇到致命错误");
+				Project.logs_Pro("[byte]遇到致命错误:"+e);
 				e.printStackTrace();
 			}
 			return input_text;
@@ -221,13 +206,11 @@ public class Scanner implements Console_Scanner {
 		public static float Float() {
 			float input_text = 0;
 			try {
-				java.util.Scanner input = new java.util.Scanner(System.in);
-				input_text = input.nextFloat();
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[float]输入:" + input_text);
+				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextFloat();
+				Project.logs_Pro_file("[float]输入:" + input_text);
 				return input_text;
 			} catch (Exception e) {
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[float]遇到致命错误");
-				Project.logs(Thread.currentThread().getStackTrace()[1].getClassName() + "():" + "[float]遇到致命错误");
+				Project.logs_Pro("[float]遇到致命错误:"+e);
 				e.printStackTrace();
 			}
 			return input_text;

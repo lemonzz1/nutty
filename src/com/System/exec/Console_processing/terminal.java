@@ -33,7 +33,7 @@ public class terminal {
 			Process process = null;
 			try {
 				process = Runtime.getRuntime().exec(commandStr);
-				Project.logs("terminal.set_command():运行终端代码[" + commandStr + "]");
+				Project.logs_Pro_file("运行终端代码[" + commandStr + "]");
 			} catch (IOException Error) {
 				//System.out.println(List.getHashMap(20) + "[" + commandStr + "]" + List.getHashMap(21));
 				Class_Print(2, List.getHashMap(20) + "[" + commandStr + "]" + List.getHashMap(21));

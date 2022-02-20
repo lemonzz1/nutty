@@ -1,10 +1,10 @@
 package com.File.Text;
 
+import com.project.log.Project;
+
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import static com.System.print.console.Class_Print_logs;
 
 public class TextPro {
 	private static String Text;
@@ -27,7 +27,7 @@ public class TextPro {
 		bufferedReader = new BufferedReader(fileReader);
 		while ((Text = bufferedReader.readLine()) != null) {
 			System.out.println(Text);
-			Class_Print_logs(2, Text);
+			Project.logs_Pro(2, Text);
 		}
 		bufferedReader.close();
 		fileReader.close();
@@ -37,7 +37,7 @@ public class TextPro {
 		bufferedReader = new BufferedReader(fileReader);
 		while ((Text = bufferedReader.readLine()) != null) {
 			//System.out.println(Text);
-			Class_Print_logs(2, Text);
+			Project.logs_Pro(2, Text);
 		}
 		bufferedReader.close();
 		fileReader.close();
@@ -46,7 +46,7 @@ public class TextPro {
 	public TextPro(BufferedReader bufferedReader) throws IOException {
 		while ((Text = bufferedReader.readLine()) != null) {
 			//System.out.println(Text);
-			Class_Print_logs(2, Text);
+			Project.logs_Pro(2, Text);
 		}
 		bufferedReader.close();
 	}
@@ -65,7 +65,7 @@ public class TextPro {
 			while ((Text = bufferedReader.readLine()) != null) {
 				//输出Text内容
 				//System.out.println(Text);
-				Class_Print_logs(2, Text);
+				Project.logs_Pro(2, Text);
 			}
 			//关闭bufferedReade
 			bufferedReader.close();
@@ -74,8 +74,8 @@ public class TextPro {
 		} else {
 			//如果不在
 			//打印方法所在位置并输出参数内的路径
-			//System.err.println("["+this.getClass().getName()+":"+Thread.currentThread().getStackTrace()[1].getMethodName()+"]:未能找到["+ file +"]文件");
-			Class_Print_logs(2, "[" + this.getClass().getName() + ":" + Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
+			//System.err.println("["+this.getClass().getName()+":"+Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName()+"]:未能找到["+ file +"]文件");
+			Project.logs_Pro(2, "[" + this.getClass().getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
 		}
 
 	}
@@ -93,7 +93,7 @@ public class TextPro {
 				while ((Text = bufferedReader.readLine()) != null) {
 					//输出Text内容
 					//System.out.println(Text);
-					Class_Print_logs(2, Text);
+					Project.logs_Pro(2, Text);
 				}
 				//关闭bufferedReade
 				bufferedReader.close();
@@ -102,8 +102,8 @@ public class TextPro {
 			} else {
 				//如果不在
 				//打印方法所在位置并输出参数内的路径
-				//System.err.println("["+this.getClass().getName()+":"+Thread.currentThread().getStackTrace()[1].getMethodName()+"]:未能找到["+file+"]文件");
-				Class_Print_logs(2, "[" + this.getClass().getName() + ":" + Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
+				//System.err.println("["+this.getClass().getName()+":"+Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName()+"]:未能找到["+file+"]文件");
+				Project.logs_Pro(2, "[" + this.getClass().getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
 			}
 			//捕获BUG原因
 		} catch (Exception Error) {
@@ -140,7 +140,7 @@ public class TextPro {
 		bufferedReader = new BufferedReader(fileReader);
 		while ((Text = bufferedReader.readLine()) != null) {
 			//System.out.println(Text);
-			Class_Print_logs(2, Text);
+			Project.logs_Pro(2, Text);
 		}
 	}
 
@@ -148,7 +148,7 @@ public class TextPro {
 		bufferedReader = new BufferedReader(fileReader);
 		while ((Text = bufferedReader.readLine()) != null) {
 			//System.out.println(Text);
-			Class_Print_logs(2, Text);
+			Project.logs_Pro(2, Text);
 		}
 		bufferedReader.close();
 		fileReader.close();
@@ -158,7 +158,7 @@ public class TextPro {
 		bufferedReader = new BufferedReader(fileReader);
 		while ((Text = bufferedReader.readLine()) != null) {
 			//System.out.println(Text);
-			Class_Print_logs(2, Text);
+			Project.logs_Pro(2, Text);
 		}
 		bufferedReader.close();
 		fileReader.close();
@@ -167,7 +167,7 @@ public class TextPro {
 	public static void get_TextPro_Class(BufferedReader bufferedReader) throws IOException {
 		while ((Text = bufferedReader.readLine()) != null) {
 			//System.out.println(Text);
-			Class_Print_logs(2, Text);
+			Project.logs_Pro(2, Text);
 		}
 		bufferedReader.close();
 	}
@@ -186,7 +186,7 @@ public class TextPro {
 			while ((Text = bufferedReader.readLine()) != null) {
 				//输出Text内容
 				//System.out.println(Text);
-				Class_Print_logs(2, Text);
+				Project.logs_Pro(2, Text);
 			}
 			//关闭bufferedReade
 			bufferedReader.close();
@@ -195,8 +195,8 @@ public class TextPro {
 		} else {
 			//如果不在
 			//打印方法所在位置并输出参数内的路径
-			//System.err.println("["+ get_TextPro.class.getName()+":"+Thread.currentThread().getStackTrace()[1].getMethodName()+"]:未能找到["+ file +"]文件");
-			Class_Print_logs(2, "[" + TextPro.class.getName() + ":" + Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
+			//System.err.println("["+ get_TextPro.class.getName()+":"+Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName()+"]:未能找到["+ file +"]文件");
+			Project.logs_Pro(2, "[" + TextPro.class.getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
 		}
 	}
 
@@ -213,7 +213,7 @@ public class TextPro {
 				while ((Text = bufferedReader.readLine()) != null) {
 					//输出Text内容
 					//System.out.println(Text);
-					Class_Print_logs(2, Text);
+					Project.logs_Pro(2, Text);
 				}
 				//关闭bufferedReade
 				bufferedReader.close();
@@ -222,8 +222,8 @@ public class TextPro {
 			} else {
 				//如果不在
 				//打印方法所在位置并输出参数内的路径
-				//System.err.println("[" + get_TextPro.class.getName() + ":" + Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
-				Class_Print_logs(2, "[" + TextPro.class.getName() + ":" + Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
+				//System.err.println("[" + get_TextPro.class.getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
+				Project.logs_Pro(2, "[" + TextPro.class.getName() + ":" + Thread.currentThread().getStackTrace()[1].getClassName()+"@"+Thread.currentThread().getStackTrace()[1].getMethodName() + "]:未能找到[" + file + "]文件");
 			}
 			//捕获BUG原因
 		} catch (Exception Error) {

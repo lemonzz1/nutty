@@ -6,6 +6,7 @@ import com.System.Time.Data.Time;
 import com.System.local.get_local;
 import com.System.print.List;
 import com.System.print.console;
+import com.System.print.cont;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -26,6 +27,35 @@ public class Project {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	private static void logs_file_class(int i,String logs_Text){
+		logs(logs_Text);
+		cont.print_logs(i,logs_Text);
+
+	}
+
+	public static void logs_file(String logs_text){
+		logs_file_class(4,logs_text);
+	}
+
+	public static void logs_file(int i,String logs_text){
+		logs_file_class(i,logs_text);
+	}
+
+	public static void logs_Pro(int i,String logs_text){
+		String class_name= new Exception().getStackTrace()[1].getClassName()+"@"+new Exception().getStackTrace()[1].getMethodName()+"():"+logs_text;
+		logs_file_class(i,class_name);
+	}
+
+	public static void logs_Pro(String logs_text){
+		String class_name= new Exception().getStackTrace()[1].getClassName()+"@"+new Exception().getStackTrace()[1].getMethodName()+"():"+logs_text;
+		logs_file_class(4,class_name);
+	}
+
+	public static void logs_Pro_file(String logs_text){
+		String class_name= new Exception().getStackTrace()[1].getClassName()+"@"+new Exception().getStackTrace()[1].getMethodName()+"():"+logs_text;
+		logs(class_name);
 	}
 
 	private static boolean File_list(String file_CD) {
