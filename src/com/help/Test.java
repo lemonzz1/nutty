@@ -10,7 +10,7 @@ import javax.swing.*;
 
 public class Test {
 	public static int main() {
-		Project.logs_Pro(2,"正在运行");
+		Project.logs_Pro(2, "正在运行");
 		while (true) {
 			cont.print(2, "有什么需要帮助的吗?\n1.帮助\t2.简介\t3.运行终端代码\t4.弹出弹出对话框\t5.退出");
 			int i = Scanner.input_title.Int("1~4>>>");
@@ -44,7 +44,7 @@ public class Test {
 					console.code();
 				}
 				case 5 -> {
-					Project.logs_Pro(2,"以停止运行");
+					Project.logs_Pro(2, "以停止运行");
 					return 0;
 				}
 				default -> {

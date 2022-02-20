@@ -29,32 +29,32 @@ public class Project {
 		}
 	}
 
-	private static void logs_file_class(int i,String logs_Text){
+	private static void logs_file_class(int i, String logs_Text) {
 		logs(logs_Text);
-		cont.print_logs(i,logs_Text);
+		cont.print_logs(i, logs_Text);
 
 	}
 
-	public static void logs_file(String logs_text){
-		logs_file_class(4,logs_text);
+	public static void logs_file(String logs_text) {
+		logs_file_class(4, logs_text);
 	}
 
-	public static void logs_file(int i,String logs_text){
-		logs_file_class(i,logs_text);
+	public static void logs_file(int i, String logs_text) {
+		logs_file_class(i, logs_text);
 	}
 
-	public static void logs_Pro(int i,String logs_text){
-		String class_name= new Exception().getStackTrace()[1].getClassName()+"@"+new Exception().getStackTrace()[1].getMethodName()+"():"+logs_text;
-		logs_file_class(i,class_name);
+	public static void logs_Pro(int i, String logs_text) {
+		String class_name = new Exception().getStackTrace()[1].getClassName() + "@" + new Exception().getStackTrace()[1].getMethodName() + "():" + logs_text;
+		logs_file_class(i, class_name);
 	}
 
-	public static void logs_Pro(String logs_text){
-		String class_name= new Exception().getStackTrace()[1].getClassName()+"@"+new Exception().getStackTrace()[1].getMethodName()+"():"+logs_text;
-		logs_file_class(4,class_name);
+	public static void logs_Pro(String logs_text) {
+		String class_name = new Exception().getStackTrace()[1].getClassName() + "@" + new Exception().getStackTrace()[1].getMethodName() + "():" + logs_text;
+		logs_file_class(4, class_name);
 	}
 
-	public static void logs_Pro_file(String logs_text){
-		String class_name= new Exception().getStackTrace()[1].getClassName()+"@"+new Exception().getStackTrace()[1].getMethodName()+"():"+logs_text;
+	public static void logs_Pro_file(String logs_text) {
+		String class_name = new Exception().getStackTrace()[1].getClassName() + "@" + new Exception().getStackTrace()[1].getMethodName() + "():" + logs_text;
 		logs(class_name);
 	}
 
