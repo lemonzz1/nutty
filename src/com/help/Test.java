@@ -18,14 +18,14 @@ public class Test {
 				i = 0;
 			} else if (i == 4) {
 				Object[] options = {"帮助", "简介", "运行终端代码", "退出"};
-				String s = form.start.chooseForm("选择你要的功能:",log.jarName,"src/com/data/icon/icon_1.png","简介", options);
-				if (s.equals("帮助")){
+				String s = form.start.chooseForm("选择你要的功能:", log.jarName, "src/com/data/icon/icon_1.png", "简介", options);
+				if (s.equals("帮助")) {
 					i = 1;
-				}else if (s.equals("简介")){
+				} else if (s.equals("简介")) {
 					i = 2;
-				}else if (s.equals("运行终端代码")){
+				} else if (s.equals("运行终端代码")) {
 					i = 3;
-				}else if (s.equals("退出")){
+				} else if (s.equals("退出")) {
 					i = 5;
 				}
 			}

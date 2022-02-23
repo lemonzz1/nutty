@@ -11,7 +11,7 @@ public class Scanner {
 			Project.logs_Pro_file("调用Scanner类");
 			return new java.util.Scanner(System.in);
 		} catch (Exception e) {
-			Project.logs_Pro("Scanner未调用成功"+e);
+			Project.logs_Pro("Scanner未调用成功" + e);
 			Project.logs_Pro("遇到致命错误:" + e);
 			e.printStackTrace();
 		}
