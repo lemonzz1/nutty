@@ -1,5 +1,7 @@
 # nutty
 # nutty.jar
+# nutty控制台启动方法
+#  1.终端输入:Java -esa -jar ./nutty.jar
 # 用法:
 # 代替Scanner的方法
 #  1.根据你要输入的内容接受返回值
