@@ -2,6 +2,7 @@ package com.System.exec.Console_processing;
 
 import com.System.print.List;
 import com.project.log.Project;
+import com.set.log;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,7 +34,7 @@ public class terminal {
 			Process process = null;
 			try {
 				process = Runtime.getRuntime().exec(commandStr);
-				Project.logs_Pro_file("运行终端代码[" + commandStr + "]");
+				Project.logs_Pro_file(log.Name, "运行终端代码[" + commandStr + "]");
 			} catch (IOException Error) {
 				//System.out.println(List.getHashMap(20) + "[" + commandStr + "]" + List.getHashMap(21));
 				Class_Print(2, List.getHashMap(20) + "[" + commandStr + "]" + List.getHashMap(21));

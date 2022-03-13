@@ -1,10 +1,11 @@
 package com.set;
 
 public class log {
-	public static String jarName = "nutty.jar";
-	public static String jarVersion = "1.5";
-	public static String jarMainFile = "src/com/help/Main";
-	public static String jarAuthor = "Lemon";
-	public static String jarEmail = "hsdnmzz@163.com";
-	public static String jarUrl = "https://github.com/lemonzz1/nutty";
+	public final static String Name = "nutty";
+	public final static String jarName = "nutty.jar";
+	public final static String jarVersion = "2.0.1.bate";
+	public final static String jarMainFile = "src/com/help/Main";
+	public final static String jarAuthor = "Lemon,ZsepecisIC";
+	public final static String jarEmail = "hsdnmzz@163.com";
+	public final static String jarUrl = "https://github.com/lemonzz1/nutty";
 }
