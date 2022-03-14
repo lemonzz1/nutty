@@ -19,11 +19,15 @@ public class Scanner {
 		return null;
 	}
 
-	public static class input_title {
+	public static class inputTitle {
 
 		public static String PassWord(String title) {
 			String input_PassWord = null;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return null;
+				}
 				cont.print(1, title);
 				input_PassWord = Objects.requireNonNull(Scanner.input_Scanner_Class()).next();
 				Project.logs_Pro_file(log.Name, "[String:PassWord]输入:处于安全考虑，不能打印PassWord");
@@ -38,6 +42,10 @@ public class Scanner {
 		public static String String(String title) {
 			String input_text = null;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return null;
+				}
 				cont.print(1, title);
 				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextLine();
 				Project.logs_Pro_file(log.Name, "[String]输入:" + title + input_text);
@@ -52,6 +60,10 @@ public class Scanner {
 		public static int Int(String title) {
 			int input_text = 0;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return 0;
+				}
 				cont.print(1, title);
 				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextInt();
 				Project.logs_Pro_file(log.Name, "[int]输入:" + title + input_text);
@@ -68,6 +80,10 @@ public class Scanner {
 		public static boolean Boolean(String title) {
 			boolean input_text = false;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return false;
+				}
 				cont.print(1, title);
 				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextBoolean();
 				Project.logs_Pro_file(log.Name, "[boolean]输入:" + title + input_text);
@@ -83,6 +99,10 @@ public class Scanner {
 		public static double Double(String title) {
 			double input_text = 0;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return 0;
+				}
 				cont.print(1, title);
 				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextDouble();
 				Project.logs_Pro_file(log.Name, "[double]输入:" + title + input_text);
@@ -98,6 +118,10 @@ public class Scanner {
 		public static byte Byte(String title) {
 			byte input_text = 0;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return 0;
+				}
 				cont.print(1, title);
 				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextByte();
 				Project.logs_Pro_file(log.Name, "[byte]输入:" + title + input_text);
@@ -113,6 +137,10 @@ public class Scanner {
 		public static float Float(String title) {
 			float input_text = 0;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return 0;
+				}
 				cont.print(1, title);
 				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextFloat();
 				Project.logs_Pro_file(log.Name, "[float]输入:" + title + input_text);
@@ -130,6 +158,10 @@ public class Scanner {
 		public static String PassWord() {
 			String input_PassWord = null;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return null;
+				}
 				input_PassWord = Objects.requireNonNull(Scanner.input_Scanner_Class()).next();
 				Project.logs_Pro_file(log.Name, "[String:PassWord]输入:处于安全考虑，不能打印PassWord");
 				return input_PassWord;
@@ -143,6 +175,10 @@ public class Scanner {
 		public static String String() {
 			String input_text = null;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return null;
+				}
 				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextLine();
 				Project.logs_Pro_file(log.Name, "[String]输入:" + input_text);
 				return input_text;
@@ -156,6 +192,10 @@ public class Scanner {
 		public static int Int() {
 			int input_text = 0;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return 0;
+				}
 				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextInt();
 				Project.logs_Pro_file(log.Name, "[int]输入:" + input_text);
 				return input_text;
@@ -170,6 +210,10 @@ public class Scanner {
 		public static boolean Boolean() {
 			boolean input_text = false;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return false;
+				}
 				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextBoolean();
 				Project.logs_Pro_file(log.Name, "[boolean]输入:" + input_text);
 				return input_text;
@@ -183,6 +227,10 @@ public class Scanner {
 		public static double Double() {
 			double input_text = 0;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return 0;
+				}
 				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextDouble();
 				Project.logs_Pro_file(log.Name, "[double]输入:" + input_text);
 				return input_text;
@@ -196,6 +244,10 @@ public class Scanner {
 		public static byte Byte() {
 			byte input_text = 0;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return 0;
+				}
 				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextByte();
 				Project.logs_Pro_file(log.Name, "[byte]输入:" + input_text);
 				return input_text;
@@ -209,6 +261,10 @@ public class Scanner {
 		public static float Float() {
 			float input_text = 0;
 			try {
+				if(Scanner.input_Scanner_Class()==null){
+					Project.logs_Pro(log.Name, "Scanner值为null");
+					return 0;
+				}
 				input_text = Objects.requireNonNull(Scanner.input_Scanner_Class()).nextFloat();
 				Project.logs_Pro_file(log.Name, "[float]输入:" + input_text);
 				return input_text;

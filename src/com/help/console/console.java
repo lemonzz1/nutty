@@ -12,7 +12,7 @@ public class console {
 		cont.print(2, log.jarName + "控制台\n输入:nutty -help\n显示详细帮助");
 		boolean c = true;
 		while (c) {
-			String code_Text = Scanner.input_title.String("nutty>>>");
+			String code_Text = Scanner.inputTitle.String("nutty>>>");
 			if (!code_Text.equals("")) {
 				int code_Text_FG_i_2 = code_Text.indexOf(" ");
 				if (code_Text_FG_i_2 <= 0) {

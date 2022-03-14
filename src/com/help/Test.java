@@ -14,7 +14,7 @@ public class Test {
 		boolean c = true;
 		while (c) {
 			cont.print(2, "有什么需要帮助的吗?\n1.帮助\t2.简介\t3." + log.jarName + "控制台\t4.弹出弹出对话框\t5.退出");
-			int i = Scanner.input_title.Int("1~5>>>");
+			int i = Scanner.inputTitle.Int("1~5>>>");
 			if (i > 5 || i <= 0) {
 				cont.print(2, "只能输入1-5之内的整数");
 				i = 0;
