@@ -7,12 +7,14 @@ import com.System.print.cont;
 import com.help.Test;
 import com.help.console.code.help;
 import com.set.log;
+import com.variable.sum.RandomPro;
 
 public class switchClass {
 
 	public static boolean switchService(String numt) {
 		switch (numt.toLowerCase()) {
 			case "exit()", "exit", "stop()", "stop", "break()", "break", "quit()", "quit" -> {
+				cont.print(cont.PrintKEY.End,"Bey!");
 				cont.print("nutty以停止运行");
 				return false;
 			}
@@ -54,17 +56,23 @@ public class switchClass {
 			case "test", "test()" -> {
 				cont.print(2, "test() -help/-start\t\t显示" + log.jarName + "包的详细帮助");
 			}
-			case "hello", "hello()" -> {
+			case "hello", "hello()","world","world()","world!","world!()" -> {
 				cont.print(2, "Hello World!");
 			}
-			case "world", "world()", "world!", "world!()" -> {
-				cont.print(2, "Hello World!");
-			}
-			case "null", "null()" -> {
+			case "null", "null()","\"\""," ","\" \"" -> {
 				cont.print("\"null\"");
 			}
 			case "0" -> {
 				cont.print("\"0\"");
+			}
+			case "0.0" -> {
+				cont.print("\"0.0\"");
+			}
+			case "ran","ran()","random","random()" -> {
+				cont.print("生成随机数:\tran()/random()\t\t<Int>");
+			}
+			case "cat","cat()" -> {
+				cont.print("喵~");
 			}
 			default -> {
 				terminal.set_terminal(numt);
@@ -75,7 +83,7 @@ public class switchClass {
 
 	public static void switchServiceDouble(String numt, String DoubleText_0, String DoubleText_1) {
 		switch (DoubleText_0.toLowerCase()) {
-			case "nutty", "nutty()" -> {
+			case "nutty", "nutty()","test", "test()" -> {
 				if (DoubleText_1.equalsIgnoreCase("-help") || DoubleText_1.equalsIgnoreCase("--help") || DoubleText_1.equalsIgnoreCase("-start") || DoubleText_1.equalsIgnoreCase("--start")) {
 					Test.main();
 				} else if (DoubleText_1.equalsIgnoreCase("-thanks")) {
@@ -87,14 +95,18 @@ public class switchClass {
 					cont.print("帮助正在编辑中");
 				}
 			}
-			case "test", "test()" -> {
-				if (DoubleText_1.equalsIgnoreCase("-help") || DoubleText_1.equalsIgnoreCase("--help") || DoubleText_1.equalsIgnoreCase("-start") || DoubleText_1.equalsIgnoreCase("--start")) {
-					Test.main();
-				}
-			}
 			case "hello", "hello()" -> {
 				if (DoubleText_1.equalsIgnoreCase("world")) {
 					cont.print(2, "Hello World!");
+				}
+			}
+			case "ran","ran()","random","random()" -> {
+				try{
+					int i = RandomPro.nextInteger(Integer.parseInt(DoubleText_1));
+					cont.print(i);
+				}catch (Exception Error){
+					cont.print(cont.PrintKEY.End,"只能输入<int>值");
+					Error.printStackTrace();
 				}
 			}
 			default -> {

@@ -5,6 +5,10 @@ import com.set.log;
 
 public class help {
 
+	public enum HelpService {
+		help, Text, thanks
+	}
+
 	public static class HelloHelp {
 		public static void HelpServiceClass(HelpService helpService) {
 			switch (helpService) {
@@ -40,9 +44,6 @@ public class help {
 			HelpServiceClass(HelpService.thanks);
 		}
 
-		enum HelpService {
-			help, Text, thanks
-		}
 
 	}
 

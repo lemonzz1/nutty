@@ -24,7 +24,7 @@ public class Scanner {
 		public static String PassWord(String title) {
 			String input_PassWord = null;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return null;
 				}
@@ -42,7 +42,7 @@ public class Scanner {
 		public static String String(String title) {
 			String input_text = null;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return null;
 				}
@@ -60,7 +60,7 @@ public class Scanner {
 		public static int Int(String title) {
 			int input_text = 0;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return 0;
 				}
@@ -80,7 +80,7 @@ public class Scanner {
 		public static boolean Boolean(String title) {
 			boolean input_text = false;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return false;
 				}
@@ -99,7 +99,7 @@ public class Scanner {
 		public static double Double(String title) {
 			double input_text = 0;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return 0;
 				}
@@ -118,7 +118,7 @@ public class Scanner {
 		public static byte Byte(String title) {
 			byte input_text = 0;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return 0;
 				}
@@ -137,7 +137,7 @@ public class Scanner {
 		public static float Float(String title) {
 			float input_text = 0;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return 0;
 				}
@@ -158,7 +158,7 @@ public class Scanner {
 		public static String PassWord() {
 			String input_PassWord = null;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return null;
 				}
@@ -175,7 +175,7 @@ public class Scanner {
 		public static String String() {
 			String input_text = null;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return null;
 				}
@@ -192,7 +192,7 @@ public class Scanner {
 		public static int Int() {
 			int input_text = 0;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return 0;
 				}
@@ -210,7 +210,7 @@ public class Scanner {
 		public static boolean Boolean() {
 			boolean input_text = false;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return false;
 				}
@@ -227,7 +227,7 @@ public class Scanner {
 		public static double Double() {
 			double input_text = 0;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return 0;
 				}
@@ -244,7 +244,7 @@ public class Scanner {
 		public static byte Byte() {
 			byte input_text = 0;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return 0;
 				}
@@ -261,7 +261,7 @@ public class Scanner {
 		public static float Float() {
 			float input_text = 0;
 			try {
-				if(Scanner.input_Scanner_Class()==null){
+				if (Scanner.input_Scanner_Class() == null) {
 					Project.logs_Pro(log.Name, "Scanner值为null");
 					return 0;
 				}

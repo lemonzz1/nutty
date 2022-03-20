@@ -6,19 +6,21 @@ import com.help.console.code.codeText.switchClass;
 import com.project.log.Project;
 import com.set.log;
 
+import java.util.Objects;
+
 public class console {
 	public static void code() {
 		Project.logs_Pro(2, log.Name, "正在运行");
 		cont.print(2, log.jarName + "控制台\n输入:nutty -help\n显示详细帮助");
-		boolean c = true;
-		while (c) {
+		while1:
+		while (true) {
 			String code_Text = Scanner.inputTitle.String("nutty>>>");
-			if (!code_Text.equals("")) {
+			if (!Objects.equals(code_Text, "")) {
 				int code_Text_FG_i_2 = code_Text.indexOf(" ");
 				if (code_Text_FG_i_2 <= 0) {
-					c = switchClass.switchService(code_Text);
-					if (!c) {
+					if (!switchClass.switchService(code_Text)) {
 						Project.logs_Pro(2, log.Name, "以停止运行");
+						break while1;
 					}
 				} else {
 					String code_Text_FG_0 = code_Text.substring(0, code_Text_FG_i_2);
