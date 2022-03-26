@@ -1,7 +1,7 @@
-package com.System.Detection.console_code.System.web;
+package com.System.Detection.console_code.System.macOS.web;
 
-import com.System.Detection.Detection;
-import com.System.exec.Console_processing.terminal;
+import com.System.Detection.console_code.System.macOS.Detection;
+import com.System.exec.ConsoleProcessing.terminal;
 import com.System.print.cont;
 
 public class ping extends Detection {

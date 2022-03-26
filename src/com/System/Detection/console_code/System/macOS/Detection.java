@@ -1,9 +1,9 @@
-package com.System.Detection;
+package com.System.Detection.console_code.System.macOS;
 
-import com.System.Detection.console_code.System.File.mkdir;
-import com.System.Detection.console_code.System.File.rmdir;
-import com.System.Detection.console_code.System.print.echo;
-import com.System.Detection.console_code.System.web.ping;
+import com.System.Detection.console_code.System.macOS.File.mkdir;
+import com.System.Detection.console_code.System.macOS.File.rmdir;
+import com.System.Detection.console_code.System.macOS.print.echo;
+import com.System.Detection.console_code.System.macOS.web.ping;
 
 public class Detection {
 	public static class macOS {

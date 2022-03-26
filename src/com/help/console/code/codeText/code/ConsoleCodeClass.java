@@ -1,6 +1,6 @@
 package com.help.console.code.codeText.code;
 
-import com.System.exec.Console_processing.terminal;
+import com.System.exec.ConsoleProcessing.terminal;
 
 public class ConsoleCodeClass {
 

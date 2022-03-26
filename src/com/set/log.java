@@ -8,4 +8,5 @@ public class log {
 	public final static String jarAuthor = "Lemon,ZsepecisIC";
 	public final static String jarEmail = "hsdnmzz@163.com";
 	public final static String jarUrl = "https://github.com/lemonzz1/nutty";
+	public static String jarPassWord = "123456789";
 }

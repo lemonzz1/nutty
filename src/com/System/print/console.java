@@ -4,13 +4,14 @@ import com.project.log.Project;
 import com.set.log;
 
 import static com.System.Time.Data.Time.System_Time;
-import static com.System.local.get_local.get_local_computer_name;
-import static com.System.local.get_local.get_local_user_name;
+import static com.System.local.get_local.LocalHost.SystemHost.get_local_computer_name;
+import static com.System.local.get_local.LocalHost.user.get_local_user_name;
 
 public class console {
 
-	enum PrintKEY{
-		NotEnd,End,ErrorNotEnd,ErrorEnd
+	public console(PrintKEY printKEY, Object print_Text) {
+		Project.logs_Pro_file(log.Name, "打印:[" + printKEY + "," + print_Text + "]");
+		Print(printKEY, print_Text);
 	}
 
 	public console(int i, Object print_Text) {
@@ -18,7 +19,7 @@ public class console {
 		Print(i, print_Text);
 	}
 
-	public console(PrintKEY printKEY, Object print_Text) {
+	public static void Class_Print(PrintKEY printKEY, Object print_Text) {
 		Project.logs_Pro_file(log.Name, "打印:[" + printKEY + "," + print_Text + "]");
 		Print(printKEY, print_Text);
 	}
@@ -33,7 +34,7 @@ public class console {
 		Print(i, print_Text);
 	}
 
-	public static void Class_Print(PrintKEY printKEY, Object print_Text) {
+	public static void System_Print(PrintKEY printKEY, Object print_Text) {
 		Project.logs_Pro_file(log.Name, "打印:[" + printKEY + "," + print_Text + "]");
 		Print(printKEY, print_Text);
 	}
@@ -53,9 +54,9 @@ public class console {
 		Print(i, print_Text);
 	}
 
-	public static void System_Print(PrintKEY printKEY, Object print_Text) {
+	public static void System_Print_logs(PrintKEY printKEY, Object print_Text) {
 		Project.logs_Pro_file(log.Name, "打印:[" + printKEY + "," + print_Text + "]");
-		Print(printKEY, print_Text);
+		logs(printKEY, print_Text);
 	}
 
 	public static void System_Print(Object print_Text) {
@@ -73,7 +74,7 @@ public class console {
 		logs(i, print_Text);
 	}
 
-	public static void System_Print_logs(PrintKEY printKEY, Object print_Text) {
+	public static void Class_Print_logs(PrintKEY printKEY, Object print_Text) {
 		Project.logs_Pro_file(log.Name, "打印:[" + printKEY + "," + print_Text + "]");
 		logs(printKEY, print_Text);
 	}
@@ -93,9 +94,9 @@ public class console {
 		logs(i, print_Text);
 	}
 
-	public static void Class_Print_logs(PrintKEY printKEY, Object print_Text) {
+	public static void print(PrintKEY printKEY, Object print_Text) {
 		Project.logs_Pro_file(log.Name, "打印:[" + printKEY + "," + print_Text + "]");
-		logs(printKEY, print_Text);
+		Print(printKEY, print_Text);
 	}
 
 	public static void Class_Print_logs(Object print_Text) {
@@ -113,9 +114,9 @@ public class console {
 		Print(i, print_Text);
 	}
 
-	public static void print(PrintKEY printKEY, Object print_Text) {
-		Project.logs_Pro_file(log.Name, "打印:[" + printKEY + "," + print_Text + "]");
-		Print(printKEY, print_Text);
+	public static void print(PrintKEY printKEY) {
+		Project.logs_Pro_file(log.Name, "打印:[默认,空值]");
+		print(printKEY, "");
 	}
 
 	public static void print(Object print_Text) {
@@ -128,9 +129,9 @@ public class console {
 		print(i, "");
 	}
 
-	public static void print(PrintKEY printKEY) {
-		Project.logs_Pro_file(log.Name, "打印:[默认,空值]");
-		print(printKEY, "");
+	public static void print_logs(PrintKEY printKEY, Object print_Text) {
+		Project.logs_Pro_file(log.Name, "打印:[" + printKEY + "," + print_Text + "]");
+		logs(printKEY, print_Text);
 	}
 
 	public static void print() {
@@ -148,9 +149,8 @@ public class console {
 		logs(i, print_Text);
 	}
 
-	public static void print_logs(PrintKEY printKEY, Object print_Text) {
-		Project.logs_Pro_file(log.Name, "打印:[" + printKEY + "," + print_Text + "]");
-		logs(printKEY, print_Text);
+	private static void logs(PrintKEY printKEY, Object object) {
+		Print(printKEY, "[" + get_local_computer_name() + "@" + System_Time("yyyy-MM-dd|HH:mm:ss") + "->" + get_local_user_name() + "]:" + object);
 	}
 
 	public static void print_logs(Object print_Text) {
@@ -167,27 +167,23 @@ public class console {
 		Print(i, "[" + get_local_computer_name() + "@" + System_Time("yyyy-MM-dd|HH:mm:ss") + "->" + get_local_user_name() + "]:" + object);
 	}
 
-	private static void logs(PrintKEY printKEY, Object object) {
-		Print(printKEY, "[" + get_local_computer_name() + "@" + System_Time("yyyy-MM-dd|HH:mm:ss") + "->" + get_local_user_name() + "]:" + object);
+	private static void Print(int i, Object object) {
+		PrintText(i, object);
 	}
 
-	private static void Print(int i, Object object){
-		PrintText(i,object);
-	}
-
-	private static void Print(PrintKEY printKEY,Object object){
-		switch (printKEY){
+	private static void Print(PrintKEY printKEY, Object object) {
+		switch (printKEY) {
 			case NotEnd -> {
-				PrintText(1,object);
+				PrintText(1, object);
 			}
 			case End -> {
-				PrintText(2,object);
+				PrintText(2, object);
 			}
 			case ErrorNotEnd -> {
-				PrintText(3,object);
+				PrintText(3, object);
 			}
 			case ErrorEnd -> {
-				PrintText(4,object);
+				PrintText(4, object);
 			}
 		}
 	}
@@ -210,5 +206,9 @@ public class console {
 				System.err.println(object);
 			}
 		}
+	}
+
+	enum PrintKEY {
+		NotEnd, End, ErrorNotEnd, ErrorEnd
 	}
 }

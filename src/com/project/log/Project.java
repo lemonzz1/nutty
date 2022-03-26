@@ -1,6 +1,6 @@
 package com.project.log;
 
-import com.File.File_CD.FileCD;
+import com.File.File_CD.Data.ProjectPath;
 import com.File.Text.setTextPro;
 import com.System.Time.Data.Time;
 import com.System.local.get_local;
@@ -18,10 +18,10 @@ public class Project {
 	public static void logs(String title, String logs_Text) {
 		try {
 			logs_Text = logs_Text.replaceAll("\n", "[\\\\n]");
-			if (File_list(FileCD.getCDFile() + "/logs")) {
-				FileWriter fileWriter = new FileWriter(FileCD.getCDFile() + "/logs/[" + title + "]" + Time.System_Time("yyyy-MM-dd") + ".log", true);
-				logs_Text = "[" + get_local.get_computer_name() + "@" + get_local.get_user_name() + "|" + Time.System_Time() + "]:" + logs_Text;
-				setTextPro setTextPro = new setTextPro(FileCD.getCDFile() + "/logs/[" + title + "]" + Time.System_Time("yyyy-MM-dd") + ".log", logs_Text + "\n", true);
+			if (File_list(ProjectPath.getCDFile() + "/logs")) {
+				FileWriter fileWriter = new FileWriter(ProjectPath.getCDFile() + "/logs/[" + title + "]" + Time.System_Time("yyyy-MM-dd") + ".log", true);
+				logs_Text = "[" + get_local.LocalHost.SystemHost.get_computer_name() + "@" + get_local.LocalHost.user.get_user_name() + "|" + Time.System_Time() + "#"+get_local.LocalHost.getLocalIP()+"]:" + logs_Text;
+				setTextPro setTextPro = new setTextPro(ProjectPath.getCDFile() + "/logs/[" + title + "]" + Time.System_Time("yyyy-MM-dd") + ".log", logs_Text + "\n", true);
 			} else {
 				console.print_logs(4, List.getHashMap(23) + "@" + List.getHashMap(24));
 			}
